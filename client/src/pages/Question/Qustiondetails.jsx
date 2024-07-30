@@ -21,7 +21,7 @@ const Qustiondetails = () => {
     const user = useSelector((state) => state.currentuserreducer);
     const location = useLocation();
     const navigate = useNavigate();
-    const url = "http://localhost:3000";
+    const url = "https://code-quest-server.vercel.app/";
 
     useEffect(() => {
         dispatch(fetchallusers());
