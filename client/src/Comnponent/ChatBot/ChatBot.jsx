@@ -22,7 +22,8 @@ const Chatbot = () => {
 
     try {
       const response = await axios({
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyBXrSakZY5mm8thhkt3_Ckaa-kYpkmsISo
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${
+          import.meta.env.VITE_CHATBOT_API_KEY
         }`,
         method: "post",
         data: { contents: [{ parts: [{ text: userMessage }] }] },
